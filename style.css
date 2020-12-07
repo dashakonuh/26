@@ -1,0 +1,1029 @@
+html,
+body {
+    display: block;
+    min-height: 100%;
+}
+
+body {
+    /*padding: 50px;*/
+  -webkit-font-smoothing: antialiased;
+    line-height: 50px;
+    font-weight: 600;
+    background: #303030;
+    margin: 0;
+  
+}
+
+ul{
+    padding: 0;
+}
+
+.main-body-wrapper{
+    font-family: 'Raleway', arial;
+    font-size: 16px;
+    font-weight: 400;
+    overflow: hidden;
+    width: 80vw;
+    display:block;
+    margin: auto;
+    background: #cfcfcf; 
+}
+
+.maxWidth{    
+    max-width: 1400px;   
+    /*  Adjust width of the example  - in this box as its a demo */
+}
+
+
+/*************   MAIN STYLES   **********************
+*********************************************************/
+
+
+/*  ============  NAV BAR  =============  */
+.navbar-main{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    position: fixed;
+    background: #fafafa;
+    width: 80vw;
+    max-width: 1400px;
+    z-index: 10;
+    top: 0;
+}
+
+.navbar-main ul{
+    display: flex;
+    margin: 0;
+    height: 50px;
+    align-items: center;
+    list-style: none;
+}
+
+.navbar-main li a{
+    text-transform: uppercase;
+    text-decoration: none;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-left: 20px;
+    padding-left: 20px;
+    font-weight: 700;
+    font-size: 0.8em;
+    letter-spacing: 0.3em;
+    color: black;
+    background: #fafafa;
+}
+
+
+/*************   BURGER MENU   **********************
+*********************************************************/
+/*
+Burger menu adapted from Vivek Kumar Bansal (https://codepen.io/vkbansal/pen/QbapGz)
+*/
+
+body.open {
+    overflow: hidden;
+}
+
+body.open:before {
+    visibility: visible;
+    opacity: 1;
+}
+
+body:before {
+    content: "";
+    position: fixed;
+    background-color:#cfcfcf ;
+    width: 100%;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    bottom: 60vh;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.4s ease;
+    z-index: 11;
+}
+
+.burger {
+    position: fixed;
+    top: 20px;
+}
+
+.burger__button {
+    display: flex;
+    position: relative;
+    background: #666666;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    text-align: center;
+    vertical-align: middle;
+    transition: all 0.2s ease;
+    box-shadow: -20px 27px 55px 0px rgba(0,0,0,0.5);
+}
+
+.burger__button.open {
+    border: 2px solid #ffffff;
+    box-shadow: none;
+}
+
+.burger__button__icon {
+    display: inline-block;
+    position: absolute;
+    background: #fff;
+    margin: 0 auto;
+    width: 20px;
+    height: 2px;
+    top: 50%;
+    left: 0;
+    right: 0;
+    
+}
+
+.burger__button__icon:before,
+.burger__button__icon:after {
+    content: "";
+    position: absolute;
+    margin: 0 auto;
+    background: #fff;
+    width: 20px;
+    height: 2px;
+    left: 0;
+    right: 0;
+    
+}
+
+.burger__button__icon:before {
+    bottom: 10px;
+}
+
+.burger__button__icon:after {
+    top: 10px;
+}
+
+.burger__button.open .burger__button__icon {
+    background: transparent;
+}
+
+.burger__button.open .burger__button__icon:before,
+.burger__button.open .burger__button__icon:after {
+    transform-origin: 0 50%;
+    width: 28.28427125px;
+}
+
+.burger__button.open .burger__button__icon:before {
+    transform: rotateZ(0.78539816rad);
+}
+
+.burger__button.open .burger__button__icon:after {
+    transform: rotateZ(-0.78539816rad);
+}
+
+.burger__menu {
+    list-style-type: none;
+    width: 100%;
+}
+
+.burger__menu li {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    visibility: hidden;
+    opacity: 0;
+    
+}
+
+.burger__menu a {
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 4vmax;
+    line-height: 8vmax;
+    font-weight: 600;
+    border-left: 3px solid transparent;
+    padding-left: 0;
+}
+
+.burger__menu li a{
+    background: #474747;
+}
+
+.burger__button.open + .burger__menu li {
+    visibility: visible;
+    opacity: 1;
+}
+
+
+#burgerOn{
+    display: none;
+}
+
+
+nav#burgerOn.burger{
+    z-index: 12;
+    width: 100vw;
+}
+
+a#burger-button.burger__button{
+    left: 81vw;
+    
+}
+/*****************************************************/
+/*****************************************************/
+
+
+
+/*
+/*  ============  SHADE 1  =============  */
+
+.shade1 {
+    /*  display: none;   */
+    position: absolute;
+    z-index: 2;
+    opacity: 0.1;
+    top: 50px;
+}
+
+
+/*  ============  LAPTOP &  TITLE COLUMN  & CODE LINK =============  */
+.lappyTitleWrapper{
+    display: flex;
+    flex-direction: row;
+    flex-grow: 2;
+    width: 100%;
+}
+
+
+.lapy{
+    position: absolute;
+    z-index: 3;
+    opacity: 1;
+}
+
+#lapytwister{
+    
+    position: relative;
+    top: 150px;
+    right: 5%;
+    z-index: 1;
+}
+
+.lapy img{
+    height: 450px;
+    width: 600px; 
+}
+
+
+/*  ============  TITLE COLUMN  =============  */
+
+
+h2 {
+    line-height: 1.3em;
+    font-size: 1.0em;
+    font-weight: 400;
+    letter-spacing: 1px;
+    color: white;
+    padding: 0;
+    margin: 0px;
+}
+
+.titleCol { 
+    display: flex;
+    position: relative;
+    height: 450px;   /*  Adjust height of the example */
+    color: white;
+    right: -5%;
+}
+
+.col {
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    line-height: 1.3em;
+    font-size: 1.2em;
+    font-weight: 400;
+    padding-top: 130px;
+    text-align: left;
+}
+
+
+.col h1{
+    z-index: 1;
+    text-align: center;
+    background: #474747;
+    line-height: 0.2em;
+    align-content: center;
+    text-transform: uppercase;
+    font-size: 1.8em;
+    letter-spacing: 0.5em;
+    font-weight: 300;
+    padding: 0;
+}
+
+
+.codeLink{
+    position: absolute;
+    top: 400px;
+    left: 65%;
+    z-index: 3;
+    width:100px;
+    height:100px;
+    background:url(camera-image-photo-photography-picture-icon-photography-icon-png-512_512.png);
+    position: absolute;
+    border-radius: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: all 0.3s ease-in-out;
+    box-shadow: -20px 27px 55px 0px rgba(0,0,0,0.75);
+}
+
+
+.codeLink:hover{
+    transform: scale(1.2);
+    background-position: center;
+    box-shadow: -64px 67px 85px 0px rgba(0,0,0,0.75);
+}
+
+
+/*  ============  ABOUT  =============  */
+
+.aboutWrapper{
+    display: flex;
+    flex-direction: column;
+    height: auto;   /*  Adjust height of the example */
+    background-color: rgb(255,255,255);
+    width: 80%;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-bottom: 50px;
+    padding-top: 50px;
+    z-index: 4;
+}
+
+.aboutCol { 
+    align-content: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: auto;   /*  Adjust height of the example */
+    /*background: #138655; */
+    color: #111;
+    max-width: 100%;
+    margin-top: 5vh;
+    margin-bottom: 3vh;
+    overflow: hidden;
+    
+}
+
+.ab-col {
+    display: flex;
+    flex-direction: column;
+    flex-basis: auto;
+    line-height: 1.3em;
+    font-size: 1.2em;
+    font-weight: 400;
+    text-align: justify;
+    /* background: #555;*/
+    max-width: 70%;  /* width od 'Abot' inside its box, so 100% means whole of its box*/
+}
+
+.ab-col span{
+    
+    z-index: 3;
+    padding-bottom: 50px;
+}
+
+.ab-col .about-title{
+    
+    line-height: 1em;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.8em;
+    letter-spacing: 0.3em;
+}
+
+span.about-title{
+    padding: 0px;
+    padding-top: 20px;
+    
+}
+
+/*  ============  SOCIAL BUTTONS  =============  */
+
+
+.socialBox {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content:space-around;
+    z-index: 7;
+}
+
+
+
+#fcc_logo{
+    background: url(instagramm.png);
+    background-size: cover;
+}
+
+
+#github_logo{
+    background: url(vk.png);
+    background-size: cover;
+}
+
+.logo{
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease-in-out;
+    box-shadow: -20px 27px 55px 0px rgba(0,0,0,0.75);
+    margin-bottom: 50px;
+}
+    
+.logo:hover{
+    transform: scale(1.2);
+    box-shadow: -64px 67px 85px 0px rgba(0,0,0,0.75);
+    background-position: center;
+}
+
+
+
+.logo a{
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #111;
+    justify-content: center;
+    
+}
+
+
+.logo>a>p{
+    
+    margin-top: 0;
+    position: relative;
+    top: 80px;
+}
+
+
+
+ /*  ============  < CODE > TITLE & TAGLINE  =========  */
+/*  =================================================  */
+
+/*  Media Query min 1000px ****  /
+
+/*  Two block statr side by side to become a colmn on wrap. 
+The first block conatins another flex block containing 
+the texts e.g. ' < CODE > 'This shanges on its parent block shrinking to<CODE>*/
+
+/* This is possibly three span's */
+
+
+
+
+/* code Wrapper  */
+
+.shade2{
+    position: absolute;
+    opacity: 0.1;
+    
+}
+
+
+
+.codeWrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: auto;   /*  Adjust height of the example */
+    background: #969696;
+    color: white;
+    max-width: 100%;
+    padding: 100px;
+    z-index: 0;
+
+}
+
+
+
+.tagBox {
+    color: white;
+    text-align: center;
+    line-height: 50px;
+    font-weight: 600;
+    padding: 0;
+    z-index: 1;
+}
+
+.codeTagBox { 
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    justify-content: center;
+    z-index: 1;
+}
+
+
+.tagBox:nth-child(1) {
+    flex-basis: auto;
+    font-size: 3em;   /* This setting for media query for less than 650px*/
+    font-weight: 500;
+    letter-spacing: 0.5em;
+    letter-spacing: 0.2em;    /* This setting for media query for less than 650px*/
+    text-align: left;
+    width: 100%;   /* Adjust to fit ' <CODE> ' in full width  */
+    z-index: 1;
+}
+
+
+
+.bracket {
+    color: white;
+    z-index: 1;
+}
+
+
+
+.tagBox:nth-child(2) {
+    flex-basis: 100px;  /* controls the height of the box */
+    flex-basis: auto; /* auto makes the box fit all the text exactly*/
+    line-height: 1.3em;
+    font-weight: 500;
+    font-size: 1.3em;
+    width: auto;
+    text-align: left;
+    z-index: 1;
+}
+
+
+
+/*  ============  CODE EXAMPLE BUTTONS  =============  */
+/*  ==================================================  */
+
+
+/********  LINKS TO APPS TO CONVERTED TO  A JAVASCRIPT ARRAY   *********/
+
+#appLink1{ 
+    background: url(mmmarkevich_111623483_2601072756782834_8374895399517084206_n.jpg);
+    background-size: 100%;
+}
+
+
+#appLink2{ 
+    background: url(mmmarkevich_118885800_843791979696359_5553976263132365191_n.jpg); 
+    background-size: 100%;
+}
+
+
+#appLink3{ 
+    
+ background: url(mmmarkevich_121645299_200108664811993_527177544968680018_n.jpg);
+    background-size: 100%;
+}
+
+
+#appLink4{ 
+    background: url(mmmarkevich_35277260_485597775192617_1702602779337424896_n.jpg);
+    background-size: 100%;
+}
+
+
+#appLink5{ 
+    background: url(mmmarkevich_62489786_2203022499781912_5517305658159251893_n.jpg); 
+
+    background-size: 100%;
+}
+
+
+#appLink6{ 
+    background: url(mmmarkevich_67525083_2663618447052313_6946669816885246838_n.jpg);
+    background-size: 100%;
+}
+
+.codeExamplesBox {
+    position: relative;
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    z-index: 4;
+}
+
+
+.appSize{
+    min-width: 250px;
+    min-height: 250px;
+    margin: 30px;
+    border: solid 10px #cfcfcf;
+    border-radius: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: all 0.3s ease-in-out;
+    box-shadow: -20px 27px 55px 0px rgba(0,0,0,0.75);
+}
+
+
+.appSize:hover{
+    transform: scale(1.4);
+    box-shadow: -64px 67px 85px 0px rgba(0,0,0,0.75);
+    pointer-events:stroke;
+}
+
+/*  ======================  CTA  ==================  */
+/*  ==================================================  */
+
+.cta{
+    flex-direction: column;
+    color: white;
+    font-size: 20px;
+    margin-left: 25%;
+    margin-right: 25%;
+    text-align: center;
+    line-height: 1em;
+    margin-bottom: 50px;
+}
+
+.cta h3{
+    display: flex;
+    justify-content: center;
+    line-height: 1.em;
+    font-size: 1em;
+    font-weight: 600;
+    flex-wrap: wrap;
+}
+
+.cta p{
+    
+    font-size: 1.2em;
+    font-weight: 300; 
+}
+
+
+
+
+
+/*  ======================  FOOTER  ==================  */
+/*  ==================================================  */
+
+
+
+.footer{
+    background: #666666;
+    color: white;
+    z-index: 9;
+    
+}
+
+.footerBottom {
+    display: flex;
+    flex-direction: column;
+}
+
+.item {
+    text-align: center;
+    line-height: 50px;
+    font-weight: 600;
+    font-size: 0.9em;
+    height: 4em;
+    width: auto;
+    padding-top: 10px;
+    margin-right: 1em;
+}
+
+
+.footerLink .chevron{
+    opacity: 0.2;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-size: 4em;
+    text-decoration: none;
+    color: white;
+    margin: auto;
+    transition: all 0.3s;
+    
+}
+
+
+.footerLink .chevron:hover{
+    transform: scale(1.3);
+    opacity: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-size: 4em;
+    text-decoration: none;
+    margin: auto;
+    color: white;
+}
+
+
+
+
+
+
+/*  =====================  MEDIA QUERIES  =====================  */
+/*  ===========================================================  */
+
+
+@media screen and (max-width: 1200px){
+    
+    #lapytwister{
+    transform:rotate(45deg);
+    height: 200px;
+    width: 200px;
+    z-index: 1;
+    }
+    
+    .col{
+        left: 5vw;
+        z-index: 1;
+    }
+    
+}
+
+@media screen and (max-width: 1000px){
+    
+    #burgerOn{
+    display: block;
+    }
+    
+    #navbarOn{
+        display: none;
+    }
+    
+    .main-body-wrapper{
+        width: 100vw;
+    }
+    
+    .navbar-main{
+        width: 100vw;
+    }
+    
+    
+    #lapytwister{
+    transform:rotate(45deg);
+    height: 100px;
+    width: 100px;
+    z-index: 1;
+    }
+    
+    
+    .col{
+        left: 15vw;
+        z-index: 1;
+    }
+    
+    span.about-title{
+    padding: 0px;
+    padding-top: 50px;
+    }
+}
+
+
+@media screen and (max-width: 700px){
+ 
+     #burgerOn{
+    display: block;
+    }
+    
+     #navbarOn{
+        display: none;
+    }
+    
+    .main-body-wrapper{
+        width: 100vw;
+    }
+
+    
+    span.about-title{
+    padding: 0px;
+    padding-top: 80px;
+    }
+    
+    .codeLink{
+        width: 70px;
+        height: 70px;
+    }
+    
+    
+    .col{
+        left: 90px;
+        z-index: 1;
+    }
+    
+}
+
+
+
+
+@media screen and (max-width: 560px){
+    
+    
+    #burgerOn{
+    display: block;
+    }
+    
+     #navbarOn{
+        display: none;
+    }
+    
+    .main-body-wrapper{
+        width: 100vw;
+    }
+    
+    
+    body{
+        margin: 0;
+        padding: 0;
+    }
+ 
+    #callToAction.cta{
+        font-size: 14px;
+        font-weight: 600;
+    }
+    
+    .cta p{
+        font-weight: 600;
+    }
+     
+
+
+.col {
+    left: 30px;
+    padding-top: 100px;
+}
+    
+
+    
+.col h1{
+    
+    text-align: left;
+}
+
+   
+    .codeLink{
+        width: 70px;
+        height: 70px;
+    }
+    
+
+}
+
+
+
+
+
+@media screen and (max-width: 480px){
+    
+    #burgerOn{
+    display: block;
+    }
+    
+     #navbarOn{
+        display: none;
+    }
+    
+    .main-body-wrapper{
+        width: 100vw;
+    }
+    
+    .navbar-main{
+        transform: translateY(100);
+        width: 100vw;
+        justify-content:center;
+        z-index: 10;
+    }
+    
+    .navbar-main ul{
+        flex-direction: column;
+        padding: 0;
+        justify-content:space-between;
+        height: 200px;
+    }
+    
+    .navbar-main ul li{
+    margin-left: 0em;
+        margin-bottom: 10px;
+    }
+    
+    body{
+        margin: 0;
+        padding: 0;
+    }
+ 
+    #callToAction.cta{
+        font-size: 14px;
+        font-weight: 600;
+    }
+    
+    .cta p{
+        font-weight: 600;
+    }
+    
+    
+    .ab-col span{
+        text-align: left;
+        font-size: 16px;
+    }
+  
+    
+    .titleCol{
+        
+        right: 0;
+        left: 3%;
+    }
+
+    .col h1{
+        
+        font-size: 1.3em;
+    }
+
+    
+    .codeTagBox{
+        margin: 0;
+    }
+    
+    .tagBox.tagText{
+        font-size: 1em;
+        font-weight: 600;
+    }
+    
+    .tagBox.tagTitle{
+        width: 220px;
+        font-size: 2em;
+        top: 50px;
+    }
+    
+   .codeLink{
+        width: 70px;
+        height: 70px;
+    }
+    
+    .codeWrapper{
+        padding: 25px;
+        
+    }
+    
+    .appSize{
+        min-width: 110px;
+        min-height: 110px;
+        margin: 15px;
+    }
+    
+    
+
+    
+}
+
+
+
+@media screen and (max-width: 400px){
+    
+    
+    .titleCol{
+        position: relative;
+        left: -60px;
+        
+    }
+    
+    
+    .col {
+        padding-top: 70px;
+    }
+    
+    .col h1{
+        
+        font-size: 1.3em;
+    }
+    
+    .col h2{
+        font-size: 0.8em;
+        font-weight: 600;
+    }
+
+    
+    
+
+    
+}
+
+
+/*  ===========================================================  */
+/*  ===========================================================  */
